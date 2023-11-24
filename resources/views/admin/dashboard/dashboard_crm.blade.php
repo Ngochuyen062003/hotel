@@ -4,6 +4,10 @@
     Dashboard - CRM
 @endsection
 
+@section('link-active-crm')
+    active
+@endsection
+
 @section('vendors-js')
     <script src="{{ asset('admin/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 @endsection
@@ -82,7 +86,7 @@
                     <div class="card-body">
                         <div class="card-title d-flex align-items-start justify-content-between mb-4">
                         <div class="avatar flex-shrink-0">
-                            <img src="{{asset('assets/img/icons/unicons/cube-secondary.png')}}" alt="cube" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/cube-secondary.png')}}" alt="cube" class="rounded">
                         </div>
                         <div class="dropdown">
                             <button class="btn p-0" type="button" id="cardOpt2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -146,7 +150,7 @@
                         <ul class="p-0 m-0">
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/oneplus.png')}}" alt="oneplus">
+                            <img src="{{asset('admin/assets/img/icons/unicons/oneplus.png')}}" alt="oneplus">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -160,7 +164,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/watch-primary.png')}}" alt="smart band">
+                            <img src="{{asset('admin/assets/img/icons/unicons/watch-primary.png')}}" alt="smart band">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -174,7 +178,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/surface.png')}}" alt="Surface">
+                            <img src="{{asset('admin/assets/img/icons/unicons/surface.png')}}" alt="Surface">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -188,7 +192,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/iphone.png')}}" alt="iphone">
+                            <img src="{{asset('admin/assets/img/icons/unicons/iphone.png')}}" alt="iphone">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -202,7 +206,7 @@
                         </li>
                         <li class="d-flex">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/earphone.png')}}" alt="Bluetooth Earphone">
+                            <img src="{{asset('admin/assets/img/icons/unicons/earphone.png')}}" alt="Bluetooth Earphone">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -235,7 +239,7 @@
                         <ul class="p-0 m-0">
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/laptop-secondary.png')}}" alt="ENVY Laptop" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/laptop-secondary.png')}}" alt="ENVY Laptop" class="rounded">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -250,7 +254,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/computer.png')}}" alt="Apple" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/computer.png')}}" alt="Apple" class="rounded">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -265,7 +269,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/watch.png')}}" alt="Smart Watch" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/watch.png')}}" alt="Smart Watch" class="rounded">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -280,7 +284,7 @@
                         </li>
                         <li class="d-flex mb-4 pb-1">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/oneplus-success.png')}}" alt="Oneplus RT" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/oneplus-success.png')}}" alt="Oneplus RT" class="rounded">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -295,7 +299,7 @@
                         </li>
                         <li class="d-flex">
                             <div class="avatar flex-shrink-0 me-3">
-                            <img src="{{asset('assets/img/icons/unicons/pixel.png')}}" alt="Pixel 4a" class="rounded">
+                            <img src="{{asset('admin/assets/img/icons/unicons/pixel.png')}}" alt="Pixel 4a" class="rounded">
                             </div>
                             <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
@@ -601,7 +605,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar me-2">
-                                <img src="{{asset('assets/img/avatars/17.png" alt="Avatar')}}" class="rounded-circle">
+                                <img src="{{asset('admin/assets/img/avatars/17.png')}}" alt="Avatar" class="rounded-circle">
                             </div>
                             <div class="d-flex flex-column">
                                 <h6 class="mb-0 text-truncate">Nathan Wagner</h6><small class="text-truncate text-muted">iOS Developer</small>
@@ -618,7 +622,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar me-2">
-                                <img src="{{asset('assets/img/avatars/8.png')}}" alt="Avatar" class="rounded-circle">
+                                <img src="{{asset('admin/assets/img/avatars/8.png')}}" alt="Avatar" class="rounded-circle">
                             </div>
                             <div class="d-flex flex-column">
                                 <h6 class="mb-0 text-truncate">Emma Bowen</h6><small class="text-truncate text-muted">UI/UX Designer</small>
@@ -652,7 +656,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar me-2">
-                                <img src="{{asset('assets/img/avatars/2.png')}}" alt="Avatar" class="rounded-circle">
+                                <img src="{{asset('admin/assets/img/avatars/2.png')}}" alt="Avatar" class="rounded-circle">
                             </div>
                             <div class="d-flex flex-column">
                                 <h6 class="mb-0 text-truncate">Alma Gonzalez</h6><small class="text-truncate text-muted">Product Manager</small>
@@ -669,7 +673,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar me-2">
-                                <img src="{{asset('assets/img/avatars/11.png')}}" alt="Avatar" class="rounded-circle">
+                                <img src="{{asset('admin/assets/img/avatars/11.png')}}" alt="Avatar" class="rounded-circle">
                             </div>
                             <div class="d-flex flex-column">
                                 <h6 class="mb-0 text-truncate">Allan kristian</h6><small class="text-truncate text-muted">Frontend Designer</small>
@@ -708,7 +712,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-2"><img src="{{asset('assets/img/avatars/7.png')}}" alt="Avatar" class="rounded-circle"></div>
+                                <div class="avatar avatar-sm me-2"><img src="{{asset('admin/assets/img/avatars/7.png')}}" alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column">
                                 <a href="pages-profile-user.html" class="text-body text-truncate fw-medium">Henry Barnes</a>
@@ -718,7 +722,7 @@
                         </td>
                         <td>$459.65</td>
                         <td><span class="badge bg-label-success"> Paid </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/master-light.png')}}" class="img-fluid" width="50" alt="masterCard" data-app-light-img="icons/payments/master-light.png" data-app-dark-img="icons/payments/master-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/master-light.png')}}" class="img-fluid" width="50" alt="masterCard"></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
@@ -736,7 +740,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-2"><img src="{{asset('assets/img/avatars/20.png')}}" alt="Avatar" class="rounded-circle"></div>
+                                <div class="avatar avatar-sm me-2"><img src="{{asset('admin/assets/img/avatars/20.png')}}" alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column">
                                 <a href="pages-profile-user.html" class="text-body text-truncate fw-medium">Hallie Warner</a>
@@ -746,7 +750,7 @@
                         </td>
                         <td>$93.81</td>
                         <td><span class="badge bg-label-warning"> Pending </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/visa-light.png')}}" class="img-fluid" width="50" alt="visaCard" data-app-light-img="icons/payments/visa-light.png" data-app-dark-img="icons/payments/visa-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/visa-light.png')}}" class="img-fluid" width="50" alt="visaCard"></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
@@ -764,7 +768,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-2"><img src="{{asset('assets/img/avatars/9.png')}}" alt="Avatar" class="rounded-circle"></div>
+                                <div class="avatar avatar-sm me-2"><img src="{{asset('admin/assets/img/avatars/9.png')}}" alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column">
                                 <a href="pages-profile-user.html" class="text-body text-truncate fw-medium">Gerald Flowers</a>
@@ -774,7 +778,7 @@
                         </td>
                         <td>$934.35</td>
                         <td><span class="badge bg-label-warning"> Pending </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/visa-light.png')}}" class="img-fluid" width="50" alt="visaCard" data-app-light-img="icons/payments/visa-light.png" data-app-dark-img="icons/payments/visa-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/visa-light.png')}}" class="img-fluid" width="50" alt="visaCard" ></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
@@ -792,7 +796,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-2"><img src="{{asset('assets/img/avatars/14.png')}}" alt="Avatar" class="rounded-circle"></div>
+                                <div class="avatar avatar-sm me-2"><img src="{{asset('admin/assets/img/avatars/14.png')}}" alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column">
                                 <a href="pages-profile-user.html" class="text-body text-truncate fw-medium">John Davidson</a>
@@ -802,7 +806,7 @@
                         </td>
                         <td>$794.97</td>
                         <td><span class="badge bg-label-success"> Paid </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/paypal-light.png')}}" class="img-fluid" width="50" alt="paypalCard" data-app-light-img="icons/payments/paypal-light.png" data-app-dark-img="icons/payments/paypal-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/paypal-light.png')}}" class="img-fluid" width="50" alt="paypalCard"></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
@@ -830,7 +834,7 @@
                         </td>
                         <td>$19.49</td>
                         <td><span class="badge bg-label-success"> Paid </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/master-light.png')}}" class="img-fluid" width="50" alt="masterCard" data-app-light-img="icons/payments/master-light.png" data-app-dark-img="icons/payments/master-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/master-light.png')}}" class="img-fluid" width="50" alt="masterCard"></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>
@@ -848,7 +852,7 @@
                         <td>
                             <div class="d-flex justify-content-start align-items-center">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-2"><img src="{{asset('assets/img/avatars/8.png')}}" alt="Avatar" class="rounded-circle"></div>
+                                <div class="avatar avatar-sm me-2"><img src="{{asset('admin/assets/img/avatars/8.png')}}" alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column">
                                 <a href="pages-profile-user.html" class="text-body text-truncate fw-medium">Rena Ferguson</a>
@@ -858,7 +862,7 @@
                         </td>
                         <td>$636.27</td>
                         <td><span class="badge bg-label-danger"> Failed </span></td>
-                        <td><img src="{{asset('assets/img/icons/payments/paypal-light.png')}}" class="img-fluid" width="50" alt="paypalCard" data-app-light-img="icons/payments/paypal-light.png" data-app-dark-img="icons/payments/paypal-dark.html"></td>
+                        <td><img src="{{asset('admin/assets/img/icons/payments/paypal-light.png')}}" class="img-fluid" width="50" alt="paypalCard"></td>
                         <td>
                             <div class="d-flex align-items-center">
                             <div class="dropdown"><a href="javascript:;" class="btn dropdown-toggle hide-arrow text-body p-0" data-bs-toggle="dropdown"><i class="bx bx-dots-vertical-rounded"></i></a>

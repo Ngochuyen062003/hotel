@@ -4,6 +4,10 @@
     Dashboard
 @endsection
 
+@section('link-active-analytics')
+    active
+@endsection
+
 @section('vendors-js')
     <script src="{{ asset('admin/assets/vendor/libs/apex-charts/apexcharts.js') }}"></script>
 @endsection

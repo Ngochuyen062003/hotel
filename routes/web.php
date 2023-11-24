@@ -22,11 +22,13 @@ Route::get('/', function () {
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('dashboard_crm', [DashboardController::class, 'dashboard_crm'])->name('dashboard_crm');
+    Route::get('dashboard_ecommerce', [DashboardController::class, 'dashboard_ecommerce'])->name('dashboard_ecommerce');
+    Route::get('dashboard_logistics', [DashboardController::class, 'dashboard_logistics'])->name('dashboard_logistics');
+    Route::get('dashboard_academy', [DashboardController::class, 'dashboard_academy'])->name('dashboard_academy');
     Route::get('calender', [DashboardController::class, 'calender'])->name('calender');
 });
-// Route::get('sign-in', function () { return view('client.sign-in'); })->name('sign-in');
-Route::prefix('client')->name('client.')->group(function () {
 
+Route::prefix('client')->name('client.')->group(function () {
     Route::get('home', [MainController::class, 'home'])->name('home');
     Route::get('about', [MainController::class, 'about'])->name('about');
     Route::get('accommodation', [MainController::class, 'accommodation'])->name('accommodation');

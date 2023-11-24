@@ -27,28 +27,28 @@
                 <div class="text-truncate" data-i18n="Dashboards">Dashboards</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item active">
+                <li class="menu-item @yield('link-active-analytics')">
                     <a href="{{ route('admin.dashboard') }}" class="menu-link">
                         <div class="text-truncate" data-i18n="Analytics">Analytics</div>
                     </a>
                 </li>
-                <li class="menu-item">
+                <li class="menu-item @yield('link-active-crm')">
                     <a href="{{ route('admin.dashboard_crm') }}" class="menu-link">
                         <div class="text-truncate" data-i18n="CRM">CRM</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="app-ecommerce-dashboard.html" class="menu-link">
+                <li class="menu-item @yield('link-active-ecommerce')">
+                    <a href="{{ route('admin.dashboard_ecommerce') }}" class="menu-link">
                         <div class="text-truncate" data-i18n="eCommerce">eCommerce</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="app-logistics-dashboard.html" class="menu-link">
+                <li class="menu-item @yield('link-active-logistics')">
+                    <a href="{{ route('admin.dashboard_logistics') }}" class="menu-link">
                         <div class="text-truncate" data-i18n="Logistics">Logistics</div>
                     </a>
                 </li>
-                <li class="menu-item">
-                    <a href="app-academy-dashboard.html" class="menu-link">
+                <li class="menu-item @yield('link-active-academy')">
+                    <a href="{{ route('admin.dashboard_academy') }}" class="menu-link">
                         <div class="text-truncate" data-i18n="Academy">Academy</div>
                     </a>
                 </li>
