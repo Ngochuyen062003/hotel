@@ -5011,6 +5011,10 @@ button.close {
   overflow: hidden;
 }
 
+.modal-xl {
+    --bs-modal-width: 1140px;
+}
+
 .modal {
   position: fixed;
   top: 0;

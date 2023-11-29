@@ -5,7 +5,7 @@
 @endsection
 
 @section('link-active-crm')
-    active
+    active open
 @endsection
 
 @section('vendors-js')

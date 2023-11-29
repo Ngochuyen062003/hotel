@@ -14,19 +14,18 @@ return new class extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('room_id')->nullable();
-            $table->integer('adults')->unsigned()->default(1);
-            $table->integer('children')->unsigned()->default(0);
+            $table->string('room_id')->nullable();
+            $table->integer('adults')->unsigned();
+            $table->integer('children')->unsigned();
+            $table->decimal('surcharge', 10, 3)->default(0.000);//phụ thu - chi phí phát sinh(nếu có)
             $table->decimal('total_amount', 10, 3)->default(0.000);
-
             $table->date('start_date');
             $table->date('end_date');
 
-            $table->foreign('room_id')->references('id')->on('rooms')->onDelete('set null');
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->softDeletes();
-            $table->timestamps(); // Tự động tạo created_at và updated_at
+            $table->timestamps();
         });
     }
 

@@ -4,6 +4,10 @@
     Calender
 @endsection
 
+@section('link-active-calender')
+    active
+@endsection
+
 @section('vendors-js')
     <script src="{{asset('admin/assets/vendor/libs/fullcalendar/fullcalendar.js')}}"></script>
     <script src="{{asset('admin/assets/vendor/libs/%40form-validation/umd/bundle/popular.min.js')}}"></script>

@@ -5,7 +5,7 @@
 @endsection
 
 @section('link-active-academy')
-    active
+    active open
 @endsection
 
 @section('vendors-js')

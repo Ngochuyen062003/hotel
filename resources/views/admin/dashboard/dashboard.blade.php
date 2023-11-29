@@ -5,7 +5,7 @@
 @endsection
 
 @section('link-active-analytics')
-    active
+    active open
 @endsection
 
 @section('vendors-js')

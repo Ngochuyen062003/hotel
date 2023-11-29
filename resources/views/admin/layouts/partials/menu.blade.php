@@ -21,7 +21,11 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
-        <li class="menu-item active open">
+        <li class="menu-item @yield('link-active-analytics')
+                             @yield('link-active-crm')
+                             @yield('link-active-ecommerce')
+                             @yield('link-active-logistics')
+                             @yield('link-active-academy') ">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div class="text-truncate" data-i18n="Dashboards">Dashboards</div>
@@ -55,135 +59,16 @@
             </ul>
         </li>
 
-        <!-- Layouts -->
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div class="text-truncate" data-i18n="Layouts">Layouts</div>
-            </a>
-
-            <ul class="menu-sub">
-
-                <li class="menu-item">
-                    <a href="layouts-collapsed-menu.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Collapsed menu">Collapsed menu</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-content-navbar.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Content navbar">Content navbar</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-content-navbar-with-sidebar.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Content nav + Sidebar">Content nav + Sidebar
-                        </div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/horizontal-menu-template"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Horizontal">Horizontal</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-without-menu.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Without menu">Without menu</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-without-navbar.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Without navbar">Without navbar</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-fluid.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Fluid">Fluid</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-container.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Container">Container</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="layouts-blank.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Blank">Blank</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-        <!-- Front Pages -->
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class='menu-icon tf-icons bx bx-store'></i>
-                <div class="text-truncate" data-i18n="Front Pages">Front Pages</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/landing-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Landing">Landing</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/pricing-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Pricing">Pricing</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/payment-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Payment">Payment</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/checkout-page.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Checkout">Checkout</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/front-pages/help-center-landing.html"
-                        class="menu-link" target="_blank">
-                        <div class="text-truncate" data-i18n="Help Center">Help Center</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
-
         <!-- Apps & Pages -->
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Apps &amp; Pages</span>
         </li>
-        <li class="menu-item">
-            <a href="app-email.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-envelope"></i>
-                <div class="text-truncate" data-i18n="Email">Email</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="app-chat.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-chat"></i>
-                <div class="text-truncate" data-i18n="Chat">Chat</div>
-            </a>
-        </li>
-        <li class="menu-item">
+        <li class="menu-item @yield('link-active-calender')">
             <a href="{{ route('admin.calender') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar"></i>
                 <div class="text-truncate" data-i18n="Calendar">Calendar</div>
             </a>
         </li>
-        <li class="menu-item">
-            <a href="app-kanban.html" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-grid"></i>
-                <div class="text-truncate" data-i18n="Kanban">Kanban</div>
-            </a>
-        </li>
-        <!-- e-commerce-app menu start -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bx-cart-alt'></i>
@@ -191,23 +76,18 @@
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="app-ecommerce-dashboard.html" class="menu-link">
-                        <div class="text-truncate" data-i18n="Dashboard">Dashboard</div>
-                    </a>
-                </li>
-                <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <div class="text-truncate" data-i18n="Products">Products</div>
+                        <div class="text-truncate" data-i18n="Products">Rooms</div>
                     </a>
                     <ul class="menu-sub">
                         <li class="menu-item">
                             <a href="app-ecommerce-product-list.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Product list">Product list</div>
+                                <div class="text-truncate" data-i18n="Product list">Rooms list</div>
                             </a>
                         </li>
                         <li class="menu-item">
                             <a href="app-ecommerce-product-add.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Add Product">Add Product</div>
+                                <div class="text-truncate" data-i18n="Add Product">Add Room</div>
                             </a>
                         </li>
                         <li class="menu-item">
@@ -332,7 +212,7 @@
             </ul>
         </li>
         <!-- e-commerce-app menu end -->
-        <!-- Academy menu start -->
+        {{-- <!-- Academy menu start -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bx-book-open'></i>
@@ -356,8 +236,8 @@
                 </li>
             </ul>
         </li>
-        <!-- Academy menu end -->
-        <li class="menu-item">
+        <!-- Academy menu end --> --}}
+        {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bx-car'></i>
                 <div class="text-truncate" data-i18n="Logistics">Logistics</div>
@@ -374,8 +254,8 @@
                     </a>
                 </li>
             </ul>
-        </li>
-        <li class="menu-item">
+        </li> --}}
+        {{-- <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bx-food-menu'></i>
                 <div class="text-truncate" data-i18n="Invoice">Invoice</div>
@@ -402,7 +282,7 @@
                     </a>
                 </li>
             </ul>
-        </li>
+        </li> --}}
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-user"></i>

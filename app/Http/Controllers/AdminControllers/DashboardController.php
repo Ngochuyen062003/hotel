@@ -24,4 +24,10 @@ class DashboardController extends Controller
     public function calender(){
         return view("admin.calender.calender");
     }
+    public function login(){
+        return view("admin.login.login");
+    }
+    public function register(){
+        return view("admin.login.register");
+    }
 }
