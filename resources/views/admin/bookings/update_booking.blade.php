@@ -1,10 +1,10 @@
-@extends('admin.layouts.master')
+{{-- @extends('admin.layouts.master')
 
 @section('title')
-    Admin - Add room
+    Admin - Update Room
 @endsection
 
-@section('link-active-add-room')
+@section('link-active-list-room')
     active open
 @endsection
 
@@ -34,22 +34,16 @@
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
-
-        <h4 class="py-3 mb-4">
-            <span class="text-muted fw-light">eCommerce /</span><span> Add
-                Room</span>
-        </h4>
-
         <div class="app-ecommerce">
-            <form action="{{ route('admin.postAdd') }}" enctype="multipart/form-data" method="post">
+            <form action="{{ url('admin/update-room/'.$room->id) }}" enctype="multipart/form-data" method="post">
                 @csrf
                 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
 
                     <div class="d-flex flex-column justify-content-center">
-                        <h4 class="mb-1 mt-3">Add a new Room</h4>
+                        <h4 class="mb-1 mt-3">Update Booking - {{$room->name}}</h4>
                     </div>
                     <div class="d-flex align-content-center flex-wrap gap-3">
-                        <button type="submit" class="btn btn-primary">Publish room</button>
+                        <button type="submit" class="btn btn-primary">Update room</button>
                     </div>
 
                 </div>
@@ -68,7 +62,7 @@
                                     <div class="col">
                                         <label class="form-label" for="name">Name</label>
                                         <input type="text" class="form-control" id="name" placeholder="Name room"
-                                            name="name" aria-label="Name room">
+                                            name="name" aria-label="Name room"  value="{{ $room->name }}">
                                         @error('name')
                                             <span style="color: red">{{ $message }}</span>
                                         @enderror
@@ -78,7 +72,8 @@
                                     <div class="col">
                                         <label class="form-label" for="expert">Expert</label>
                                         <input type="text" class="form-control" id="expert"
-                                               placeholder="Write some things..." name="expert" aria-label="expert">
+                                               placeholder="Write some things..." name="expert"
+                                               aria-label="expert"  value="{{ $room->expert }}">
                                         @error('expert')
                                             <span style="color: red">{{ $message }}</span>
                                         @enderror
@@ -89,7 +84,8 @@
                                     <div class="col">
                                         <label class="form-label" for="price">Base Price</label>
                                         <input type="number" class="form-control" id="price"
-                                            placeholder="Price" name="price" aria-label="Room price">
+                                            placeholder="Price" name="price" aria-label="Room price"
+                                            value="{{ $room->price }}">
                                         @error('price')
                                             <span style="color: red">{{ $message }}</span>
                                         @enderror
@@ -100,7 +96,9 @@
                                     <div class="col">
                                         <label for="description">Description</label>
                                         <textarea class="form-control" placeholder="Write a description here"
-                                            id="description" name="description" style="height: 200px"></textarea>
+                                                  id="description" name="description" style="height: 200px">
+                                                  {{ $room->description }}
+                                        </textarea>
                                         @error('description')
                                             <span style="color: red">{{ $message }}</span>
                                         @enderror
@@ -124,4 +122,4 @@
             </form>
         </div>
     </div>
-@endsection
+@endsection --}}

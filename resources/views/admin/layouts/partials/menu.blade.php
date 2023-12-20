@@ -69,50 +69,34 @@
                 <div class="text-truncate" data-i18n="Calendar">Calendar</div>
             </a>
         </li>
-        <li class="menu-item">
+        <li class="menu-item @yield('link-active-list-room')
+                             @yield('link-active-add-room')">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class='menu-icon tf-icons bx bx-cart-alt'></i>
                 <div class="text-truncate" data-i18n="eCommerce">eCommerce</div>
             </a>
             <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <div class="text-truncate" data-i18n="Products">Rooms</div>
+                <li class="menu-item @yield('link-active-list-room') @yield('link-active-add-room')">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle ">
+                        <div class="text-truncate" data-i18n="Rooms">Rooms</div>
                     </a>
                     <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="app-ecommerce-product-list.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Product list">Rooms list</div>
+                        <li class="menu-item @yield('link-active-list-room')">
+                            <a href="{{ route('admin.list-rooms')}}" class="menu-link">
+                                <div class="text-truncate" data-i18n="Rooms list">Rooms list</div>
                             </a>
                         </li>
-                        <li class="menu-item">
-                            <a href="app-ecommerce-product-add.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Add Product">Add Room</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="app-ecommerce-category-list.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Category list">Category List</div>
+                        <li class="menu-item @yield('link-active-add-room')">
+                            <a href="{{ route('admin.add-room')}}" class="menu-link">
+                                <div class="text-truncate" data-i18n="Add Room">Add Room</div>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item">
-                    <a href="javascript:void(0);" class="menu-link menu-toggle">
-                        <div class="text-truncate" data-i18n="Order">Order</div>
+                <li class="menu-item  @yield('link-active-list-booking')">
+                    <a href="{{ route('admin.list-bookings')}}" class="menu-link">
+                        <div class="text-truncate" data-i18n="Booking">Booking</div>
                     </a>
-                    <ul class="menu-sub">
-                        <li class="menu-item">
-                            <a href="app-ecommerce-order-list.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Order list">Order list</div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="app-ecommerce-order-details.html" class="menu-link">
-                                <div class="text-truncate" data-i18n="Order Details">Order Details</div>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
                 <li class="menu-item">
                     <a href="javascript:void(0);" class="menu-link menu-toggle">
@@ -161,7 +145,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="menu-item">
+                {{-- <li class="menu-item">
                     <a href="app-ecommerce-manage-reviews.html" class="menu-link">
                         <div class="text-truncate" data-i18n="Manage reviews">Manage reviews</div>
                     </a>
@@ -208,7 +192,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
             </ul>
         </li>
         <!-- e-commerce-app menu end -->

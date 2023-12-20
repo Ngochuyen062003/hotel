@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\StaffController;
+namespace App\Http\Controllers\StaffControllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -39,5 +39,8 @@ class HomeController extends Controller
     }
     public function sign_up(){
         return view('staffs.sign_up');
+    }
+    public function booking_done(){
+        return view('staffs.booking_done');
     }
 }
