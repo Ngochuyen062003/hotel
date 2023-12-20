@@ -19,7 +19,7 @@
                                 <span class="sp-color">Sign In</span>
                                 <h2>Sign In to Your Account!</h2>
                             </div>
-                            <form id="contactForm">
+                            <form action="{{ route('admin.dashboard') }}">
                                 <div class="row">
                                     <div class="col-lg-12 ">
                                         <div class="form-group">

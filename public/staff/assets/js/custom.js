@@ -251,11 +251,20 @@
 		$('.accordion-title').not($(this)).removeClass('active');		
     });
 
-    // Datetimepicker
-    $('#datetimepicker').datepicker();
+    $('#datetimepicker').datepicker({
+        dateFormat: "yy-mm-dd",
+        autoclose: true,
+        todayHighlight: true,
+        language: 'vi'
+    });
 
     // Datetimepicker
-    $('#datetimepicker-check').datepicker();
+    $('#datetimepicker-check').datepicker({
+        dateFormat: "yy-mm-dd",
+        autoclose: true,
+        todayHighlight: true,
+        language: 'vi'
+    });
 
     // WOW JS
     new WOW().init();

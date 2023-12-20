@@ -115,7 +115,7 @@
                     <h4 class="mb-2">Adventure starts here 🚀</h4>
                     <p class="mb-4">Make your app management easy and fun!</p>
 
-                    <form id="formAuthentication" class="mb-3"
+                    <form id="formAuthentication" action="{{ route('admin.dashboard') }}" method="get" class="mb-3"
                         action="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/index.html"
                         method="POST">
                         <div class="mb-3">
@@ -155,7 +155,7 @@
 
                     <p class="text-center">
                         <span>Already have an account?</span>
-                        <a href="auth-login-cover.html">
+                        <a href="{{ route('admin.login') }}">
                             <span>Sign in instead</span>
                         </a>
                     </p>

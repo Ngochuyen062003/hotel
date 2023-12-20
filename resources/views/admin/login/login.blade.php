@@ -116,7 +116,7 @@
                 <p class="mb-4">Please sign-in to your account and start the
                     adventure</p>
 
-                <form id="formAuthentication" class="mb-3"
+                <form id="formAuthentication" action="{{ route('admin.dashboard') }}" class="mb-3"
                     action="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/html/vertical-menu-template/index.html"
                     method="POST">
                     <div class="mb-3">
@@ -157,7 +157,7 @@
 
                 <p class="text-center">
                     <span>New on our platform?</span>
-                    <a href="auth-register-cover.html">
+                    <a href="{{ route('admin.register') }}">
                     <span>Create an account</span>
                     </a>
                 </p>

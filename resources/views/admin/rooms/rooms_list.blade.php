@@ -10,26 +10,44 @@
 
 @section('vendors-js')
     <script src="{{ asset('admin/assets/vendor/libs/select2/select2.js') }}"></script>
+    <script src="{{ asset('admin/assets/vendor/libs/toastr/toastr.js') }}"></script>
     <script src="{{ asset('admin/assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js') }}"></script>
 @endsection
 
 @section('page-js')
-    <script src="{{ asset('admin/assets/js/app-ecommerce-product-list.js') }}"></script>
+    <script src="{{ asset('admin/assets/js/ui-toasts.js') }}"></script>
 @endsection
 
 @section('link-CSS')
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css') }}" />
-    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
+    <link rel="stylesheet"
+        href="{{ asset('admin/assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/select2/select2.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/toastr/toastr.css') }}" />
+    <link rel="stylesheet" href="{{ asset('admin/assets/vendor/libs/animate-css/animate.css') }}" />
 @endsection
 
 @section('content')
     <div class="container-xxl flex-grow-1 container-p-y">
 
         <h4 class="py-3 mb-4">
-            <span class="text-muted fw-light">eCommerce /</span> Product List
+            <span class="text-muted fw-light">eCommerce /</span> Rooms List
         </h4>
+
+        <div class="bs-toast toast toast-ex animate__animated my-2" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-delay="2000">
+            <div class="toast-header">
+                <i class='bx bx-bell me-2'></i>
+                <div class="me-auto fw-medium">Bootstrap</div>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Fruitcake chocolate bar tootsie roll gummies gummies jelly
+                beans cake.
+            </div>
+        </div>
 
         <!-- Product List Widget -->
 
@@ -108,30 +126,44 @@
 
         <!-- Product List Table -->
         <div class="card">
-            <div class="card-header">
-                <h5 class="card-title">Filter</h5>
-                <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
-                    <div class="col-md-4 product_status"></div>
-                    <div class="col-md-4 product_category"></div>
-                    <div class="col-md-4 product_stock"></div>
-                </div>
-            </div>
             <div class="card-datatable table-responsive">
                 <table class="datatables-products table border-top">
                     <thead>
                         <tr>
-                            <th></th>
-                            <th></th>
-                            <th>name</th>
-                            <th>type room</th>
-                            <th>stock</th>
-                            <th>sku</th>
-                            <th>price</th>
-                            <th>qty</th>
-                            <th>status</th>
-                            <th>actions</th>
+                            <th>Name</th>
+                            <th>Image</th>
+                            <th>Expert</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        @foreach ($roomList as $item)
+                            <tr>
+                                <th>{{ $item->name }}</th>
+                                <th><img src="{{ $item->main_image ? Storage::url($item->main_image) : '' }}"
+                                        alt="" width="100px"></th>
+                                <th class="text-truncate" style="max-width: 100px">{{ $item->expert }}</th>
+                                <th class="text-truncate" style="max-width: 150px;">{{ $item->description }}</th>
+                                <th>{{ number_format($item->price, 0, ".", ".") }}đ</th>
+                                <th>
+                                    <form action="{{ route('admin.form-update', [$item->id]) }}" method="get"
+                                        style="display: inline;">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                    </form>
+
+                                    <form action="{{ route('admin.del-room', [$item->id]) }}" id="showToastAnimation"
+                                        method="get" style="display: inline;">
+                                        @csrf
+                                        <button type="submit" disabled class="btn btn-danger"
+                                            data-id="{{ $item->id }}">Delete</button>
+                                    </form>
+                                </th>
+                            </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>

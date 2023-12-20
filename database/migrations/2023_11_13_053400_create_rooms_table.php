@@ -14,17 +14,12 @@ return new class extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->unsignedBigInteger('type_room');
-            $table->string('main_image');
-            $table->text('expert')->nullable();//mô tả ngắn
-            $table->text('description')->nullable();//mô tả dài
+            $table->text('description')->nullable();
             $table->decimal('price', 10, 3);
-
-            $table->foreign('type_room')->references('id')->on('type_room')->onDelete('cascade');
-
+            $table->integer('quantity');
 
             $table->softDeletes();
-            $table->timestamps();
+            $table->timestamps(); // Tự động tạo created_at và updated_at
         });
     }
 

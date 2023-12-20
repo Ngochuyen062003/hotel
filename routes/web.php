@@ -1,27 +1,15 @@
 <?php
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminControllers\DashboardController;
 use App\Http\Controllers\AdminControllers\RoomsController;
+use App\Http\Controllers\AdminControllers\AdminBookingController;
 use App\Http\Controllers\ClientControllers\MainController;
 // use App\Http\Controllers\ClientControllers\BookingController;
-use App\Http\Controllers\StaffController\HomeController;
-use App\Http\Controllers\StaffController\BookingController;
+use App\Http\Controllers\StaffControllers\HomeController;
+use App\Http\Controllers\StaffControllers\BookingController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
- */
-
-// Route::get('/', function () {
-//     return view('client.index');
-// });
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
@@ -33,6 +21,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('login', [DashboardController::class, 'login'])->name('login');
     Route::get('register', [DashboardController::class, 'register'])->name('register');
     Route::get('list-rooms', [RoomsController::class, 'list'])->name('list-rooms');
+    Route::get('add-room', [RoomsController::class, 'add'])->name('add-room');
+    Route::post('add-room', [RoomsController::class, 'postAddRoom'])->name('postAdd');
+    Route::get('update-room/{id}', [RoomsController::class, 'getRoomId'])->name('form-update');
+    Route::post('update-room/{id}', [RoomsController::class, 'postUpdateRoom'])->name('postUpdateRoom');
+    Route::get('delete-room/{id}', [RoomsController::class, 'deleteRoom'])->name('del-room');
+    Route::get('list-bookings', [AdminBookingController::class, 'list'])->name('list-bookings');
+    Route::get('update-booking/{id}', [AdminBookingController::class, 'getBookingId'])->name('form-update-booking');
+    Route::post('update-booking/{id}', [AdminBookingController::class, 'postUpdateBooking'])->name('postUpdateBooking');
 });
 
 Route::prefix('client')->name('client.')->group(function () {
@@ -58,3 +54,5 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('/sign-in', [HomeController::class, 'sign_in'])->name('sign-in');
 Route::get('/sign-up', [HomeController::class, 'sign_up'])->name('sign-up');
 Route::get('/booking', [BookingController::class, 'index'])->name('booking');
+Route::post('/booking', [BookingController::class, 'postAddBooking'])->name('postAddBooking');
+Route::get('/booking-done', [HomeController::class, 'booking_done'])->name('booking-done');
